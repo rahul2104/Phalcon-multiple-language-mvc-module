@@ -1,0 +1,16 @@
+<div style="text-align: center">
+<h1><?php echo $t->_("Welcome");?></h1>
+
+<?php //echo $this->url->get(['for' => 'frontend', 'controller' => 'index', 'action' => 'index']) ?>
+
+<!-- welcome -->
+<!-- String: hi => 'Hello' -->
+<p><?php echo $t->_("hi"), " ", $name; ?></p>
+
+<select name="language" id="language" onchange="window.location.href = this.value">
+    <option value="<?= $url->get('/en/index/index'); ?>" <?php if($language=='en'){ echo 'selected';} ?>>English</option>
+    <option value="<?= $url->get('/fr/index/index'); ?>" <?php if($language=='fr'){ echo 'selected';} ?> >French</option>
+    <option value="<?= $url->get('/ar/index/index'); ?>" <?php if($language=='ar'){ echo 'selected';} ?> >Arabic</option>
+    <option value="<?= $url->get('/hi/index/index'); ?>" <?php if($language=='hi'){ echo 'selected';} ?> >Hindi</option>
+</select>
+</div>
